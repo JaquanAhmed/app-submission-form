@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <header>
+        <nav>
+            <button type="button" onclick="alert('home!')">HOME</button>
+            <button type="button" onclick="alert('save!')">SAVE</button>
+            <button type="button" onclick="alert('cancel!')">CANCEL</button>
+          </nav> 
+    </header>
+    <form>
+        <label for="id">Student ID</label><br>
+        <input type="number" id="id" name="id"><br>
+        <label for="sname">Student Name</label><br>
+        <input type="text" id="sname" name="sname"><br>
+        <label for="department">Department</label><br>
+        <select id="department" name="department">
+            <option value="employability">Employability</option>
+            <option value="services">Student Services</option>
+            <option value="hospitality">Hospitality</option>
+            <option value="health">Health Care Practice</option>
+            <option value="marketing">Business Marketing</option>
+            <option value="welfare">Welfare</option>
+        </select><br>
+        <label for="initiative">Initiative Name</label><br>
+        <select id="initiative" name="initiative">
+            <option value="mentoring">Mentoring</option>
+            <option value="tutoring">Tutoring</option>
+            <option value="feedback">Feedback</option>
+            <option value="oneToOne">One to One Support</option>
+        </select><br>
+        <label for="time">Time Spent (Minutes)</label><br>
+        <select id="time" name="time">
+            <option value="fifteen">15</option>
+            <option value="thirty">30</option>
+            <option value="sixty">60</option>
+        </select><br>
+        <label for="target">Target</label><br>
+        <select id="target" name="target">
+            <option value="pts1">PTS1</option>
+            <option value="pts2">PTS2</option>
+            <option value="pts3">PTS3</option>
+            <option value="pts4">PTS4</option>
+            <option value="pts5">PTS5</option>
+            <option value="ptp1">PTP1</option>
+            <option value="ptp2">PTP2</option>
+            <option value="ptp3">PTP3</option>
+        </select><br>
+    </form>
+{% endblock %}

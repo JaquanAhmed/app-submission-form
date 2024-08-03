@@ -1,9 +1,11 @@
-body {
-    background: red;
-    text-align: center;
+header {
+    background-color: #003366;
+    display: block;
+    color: azure;
 }
 
-b {
-    background: yellow;
-    font-size: larger;
+body {
+    background: lightgray;
+    text-align: center;
+    padding: 2rem;
 }
