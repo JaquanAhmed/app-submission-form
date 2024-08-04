@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <header>
-        <nav>
-            <button type="button" onclick="alert('home!')">HOME</button>
-            <button type="button" onclick="alert('save!')">SAVE</button>
-            <button type="button" onclick="alert('cancel!')">CANCEL</button>
-          </nav> 
-    </header>
     <form>
-        <label for="id">Student ID</label><br>
-        <input type="number" id="id" name="id"><br>
-        <label for="sname">Student Name</label><br>
-        <input type="text" id="sname" name="sname"><br>
-        <label for="department">Department</label><br>
+        <header>
+            <nav>
+                <button class="cancel">
+                    <i class="fi fi-rr-cross"></i>
+                </button>
+                <a href="https://www.w3schools.com">
+                    <img class= "logo" src= "../static/assets/mrc_logo.png">
+                </a>
+                <button type="submit" class="submit">
+                    <i class="fi fi-rr-check"></i>
+                </button>
+            </nav> 
+        </header>
+    
+        <label for="id">STUDENT ID</label><br>
+        <input type="text" id="id" name="id" placeholder="Enter the Students ID number"><br>
+        <label for="sname">STUDENT NAME</label><br>
+        <input type="text" id="sname" name="sname" placeholder="Enter the Students name"><br>
+        <label for="department">DEPARTMENT</label><br>
         <select id="department" name="department">
+            <option selected disabled hidden>Select your Department</option>
             <option value="employability">Employability</option>
             <option value="services">Student Services</option>
             <option value="hospitality">Hospitality</option>
@@ -22,21 +30,24 @@
             <option value="marketing">Business Marketing</option>
             <option value="welfare">Welfare</option>
         </select><br>
-        <label for="initiative">Initiative Name</label><br>
+        <label for="initiative">INTITIATIVE</label><br>
         <select id="initiative" name="initiative">
+            <option selected disabled hidden>Select an initiative</option>
             <option value="mentoring">Mentoring</option>
             <option value="tutoring">Tutoring</option>
             <option value="feedback">Feedback</option>
             <option value="oneToOne">One to One Support</option>
         </select><br>
-        <label for="time">Time Spent (Minutes)</label><br>
+        <label for="time">TIME SPENT (MINUTES)</label><br>
         <select id="time" name="time">
+            <option selected disabled hidden>Select the amount of time it took</option>
             <option value="fifteen">15</option>
             <option value="thirty">30</option>
             <option value="sixty">60</option>
         </select><br>
-        <label for="target">Target</label><br>
+        <label for="target">TARGET</label><br>
         <select id="target" name="target">
+            <option selected disabled hidden>Select a target</option>
             <option value="pts1">PTS1</option>
             <option value="pts2">PTS2</option>
             <option value="pts3">PTS3</option>

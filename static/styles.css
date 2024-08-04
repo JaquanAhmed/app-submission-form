@@ -1,11 +1,92 @@
-header {
-    background-color: #003366;
-    display: block;
-    color: azure;
-}
-
 body {
     background: lightgray;
-    text-align: center;
     padding: 2rem;
+    font-family: "Poppins", sans-serif;
 }
+
+header {
+    background-color: #003366;
+    color: azure;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.logo {
+    height: 60px;
+    margin: 5px;
+}
+
+i.fi {
+    font-size: 40px;
+}
+
+.cancel {
+    background: none;
+    padding: 0px;
+    border: none;
+    float: inline-start;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: white;
+}
+
+.submit {
+    background: none;
+    padding: 0px;
+    border: none;
+    float: inline-end;
+    margin-right: 20px;
+    margin-top: 15px;
+    color: white;
+}
+
+form {
+    margin-top: 80px;
+    font-size: 20px;
+    text-align: left;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 5px solid #003366;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+input:focus{
+    background-color: #003366;
+    color: lightgray;
+}
+
+input::placeholder {
+    opacity: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+select {
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 5px solid #003366;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+select:focus {
+    background-color: #003366;
+    color: lightgray;
+}
+
