@@ -1,6 +1,6 @@
 CREATE TABLE user (
   id TEXT PRIMARY KEY,
-  name TEXT NOT NULL,
-  email TEXT UNIQUE NOT NULL,
-  profile_pic TEXT NOT NULL
+  fname TEXT NOT NULL,
+  lname TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL
 );
