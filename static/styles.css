@@ -32,6 +32,7 @@ i.fi {
     margin-left: 20px;
     margin-top: 15px;
     color: white;
+    cursor:pointer;
 }
 
 .submit {
@@ -42,6 +43,7 @@ i.fi {
     margin-right: 20px;
     margin-top: 15px;
     color: white;
+    cursor:pointer;
 }
 
 form {
