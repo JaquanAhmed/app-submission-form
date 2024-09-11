@@ -43,10 +43,7 @@ def load_user(user_id):
     return User.get(user_id)
 
 @app.route("/")
-def home():
-    if current_user.is_authenticated:
-        return render_template('home.html')
-    else:
+def auth():
         return redirect(url_for("login"))
     
 def get_google_provider_cfg():
@@ -66,6 +63,7 @@ def login():
         scope=["openid", "email", "profile"],
     )
     return redirect(request_uri)
+
 
 @app.route("/login/callback")
 def callback():
@@ -122,11 +120,22 @@ def callback():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for("home"))
+    return redirect(url_for("auth"))
+
+@app.route('/home')
+def home():
+        if current_user.is_authenticated:
+            return render_template('home.html')
+        else:
+            return redirect(url_for("login"))
+    
 
 @app.route('/form')
-def about():
-    return render_template('form.html')
+def form():
+        if current_user.is_authenticated:
+            return render_template('form.html')
+        else:
+            return redirect(url_for("login"))
 
 if __name__ == '__main__':
-    app.run(ssl_context="adhoc")
+    app.run(ssl_context='adhoc')
